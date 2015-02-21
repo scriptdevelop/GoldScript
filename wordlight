@@ -1,0 +1,25 @@
+
+/*plug-in jquery for highlight a word*/
+(function($){
+    $.fn.highlight = function(options) {
+        var settings = $.extend({
+            color: 'yellow'
+        },options||{});
+    
+        this.each(function(){
+            var words = $(this).text().split(" ");
+console.log(words);
+            var text = words.join("</span> <span>");
+console.log(text);
+            $(this).html("<span>" + text + "</span>");
+            $("span").hover(function() {
+                $(this).css("background-color", settings.color);
+            },
+            function() {
+                $(this).css("background-color", "");
+            });
+        });
+        return this;
+    };
+})(jQuery);
+ 
