@@ -7,9 +7,7 @@
     
         this.each(function(){
             var words = $(this).text().split(" ");
-console.log(words);
             var text = words.join("</span> <span>");
-console.log(text);
             $(this).html("<span>" + text + "</span>");
             $("span").hover(function() {
                 $(this).css("background-color", settings.color);
