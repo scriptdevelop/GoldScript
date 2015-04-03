@@ -7,7 +7,7 @@ jQuery(document)
     .ready(function () {
    
         $.ajax({
-                url: your-file.php',
+                url: 'wait.php',
                 type:'POST',
                 success: function (data) {
                     alert(data);
